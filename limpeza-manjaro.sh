@@ -1,12 +1,7 @@
 #!/bin/bash
 
-# O script precisa ser rodado como root
-
-echo "Atualizar Sistema"
-sudo pacman -Syu --noconfirm
-
 echo "Limpar cache de pacotes"
-sudo pacman -Rsn $(pacman -Qdtq) --noconfirm 2>/dev/null; pacman -Scc --noconfirm
+sudo pacman -Sc --noconfirm && sudo pacman -Scc --noconfirm
 
 echo "Limpar pastas recentes"
 echo | tee $HOME/.local/share/recently-used*
