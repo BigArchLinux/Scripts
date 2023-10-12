@@ -7,8 +7,6 @@ sudo pacman -Sc --noconfirm && sudo pacman -Scc --noconfirm && sudo pamac clean 
 echo | tee $HOME/.local/share/recently-used*
 
 # Limpar o cache do usuário
-rm -rf ~/.cache
-rm -rf ~/cache
-rm -rf /cache
+rm -rf ~/.cache*
 
 echo "Limpeza concluída."
