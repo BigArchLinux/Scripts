@@ -1,11 +1,14 @@
 #!/bin/bash
 
-echo "Limpar cache de pacotes"
+# Limpar cache de pacotes
 sudo pacman -Sc --noconfirm && sudo pacman -Scc --noconfirm && sudo pamac clean --no-confirm
 
-echo "Limpar pastas recentes"
+# Limpar pastas recentes
 echo | tee $HOME/.local/share/recently-used*
 
-echo 'Limpeza realizada com sucesso!';
+# Limpar o cache do usuário
+rm -rf ~/.cache
+rm -rf ~/cache
+rm -rf /cache
 
-exit
+echo "Limpeza concluída."
