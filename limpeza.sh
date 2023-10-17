@@ -6,7 +6,7 @@ sudo pacman -Sc --noconfirm && sudo pacman -Scc --noconfirm && sudo pamac clean 
 # Limpar pacotes antigos
 sudo paccache -r
 
-# Limpar pastas recentes
+# Apagar os arquivos recentes
 echo | tee $HOME/.local/share/recently-used*
 
 # Limpar o cache do usuário
