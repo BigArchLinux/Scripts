@@ -25,6 +25,26 @@ rm -rf ~/.thumbnails/*
 # Limpar Pastas Recentes
 echo | tee $HOME/.local/share/recently-used*
 
+# Limpeza de Rhythmbox
+echo "Limpando Rhythmbox..."
+rm -rf ~/.local/share/rhythmbox/
+
+# Limpeza de VLC
+echo "Limpando VLC..."
+rm -rf ~/.cache/vlc/
+
+# Limpeza de GNOME
+echo "Limpando Gnome..."
+rm -rf ~/.cache/gnome/
+
+# Limpeza do journald
+echo "Limpando journald..."
+sudo journalctl --vacuum-time=3d
+
+# Limpeza de Evolution
+echo "Limpando Evolution..."
+rm -rf ~/.local/share/evolution/mail
+
 # Limpeza de histórico de comandos do terminal
 cat /dev/null > ~/.bash_history && history -c && exit
 
