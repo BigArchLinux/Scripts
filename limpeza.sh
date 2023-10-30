@@ -9,11 +9,8 @@ sudo apt-get autoremove
 sudo rm -rf /tmp/*
 sudo rm -rf /var/tmp/*
 
-# Limpeza de caches de aplicativos específicos (você pode adicionar mais conforme necessário)
-sudo rm -rf ~/.cache/thumbnails/* # Cache de miniaturas
-sudo rm -rf ~/.cache/mozilla/firefox/* # Cache do Firefox
-sudo rm -rf ~/.cache/google-chrome/* # Cache do Google Chrome
-sudo rm -rf ~/.cache/BraveSoftware/* # Cache do brave
+# Limpeza de caches
+sudo rm -rf ~/.cache/*
 
 # Limpeza de logs antigos
 sudo find /var/log -type f -name "*.log" -exec truncate -s 0 {} \;
@@ -28,14 +25,6 @@ echo | tee $HOME/.local/share/recently-used*
 # Limpeza de Rhythmbox
 echo "Limpando Rhythmbox..."
 rm -rf ~/.local/share/rhythmbox/
-
-# Limpeza de VLC
-echo "Limpando VLC..."
-rm -rf ~/.cache/vlc/
-
-# Limpeza de GNOME
-echo "Limpando Gnome..."
-rm -rf ~/.cache/gnome/
 
 # Limpeza do journald
 echo "Limpando journald..."
