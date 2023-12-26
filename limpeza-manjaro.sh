@@ -3,7 +3,7 @@
 # Limpeza de cache e pacotes não utilizados
 sudo pacman -Sc --noconfirm
 sudo pacman -Scc --noconfirm
-sudo pacman -Rns $(pacman -Qtdq)
+sudo pamac clean --no-confirm
 
 # Limpeza de diretórios temporários
 sudo rm -rf /tmp/*
